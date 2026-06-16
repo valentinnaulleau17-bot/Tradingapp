@@ -180,7 +180,7 @@ def _candlestick_chart(sig):
                       row=1, col=1)
 
     # Volume
-    colors = ["#00E67666" if c >= o else "#FF174466"
+    colors = ["rgba(0,230,118,0.4)" if c >= o else "rgba(255,23,68,0.4)"
               for o, c in zip(df["Open"], df["Close"])]
     fig.add_trace(go.Bar(
         x=df.index, y=df["Volume"],
